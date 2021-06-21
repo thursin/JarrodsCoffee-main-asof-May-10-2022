@@ -234,7 +234,7 @@
         <!--Contact Us-->
         <scene sceneID="K94-ek-vCY">
             <objects>
-                <viewController title="Contact Us" id="76N-fe-qiR" sceneMemberID="viewController">
+                <viewController title="Contact Us" id="76N-fe-qiR" customClass="ContactUsViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s44-kV-YR9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,7 +569,7 @@
         <!--Events-->
         <scene sceneID="xeC-cu-OFg">
             <objects>
-                <viewController title="Events" id="4Rt-wi-aGH" sceneMemberID="viewController">
+                <viewController title="Events" id="4Rt-wi-aGH" customClass="EventsViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezY-NY-ZoE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -831,7 +831,7 @@
         <!--Map-->
         <scene sceneID="aRg-VI-40q">
             <objects>
-                <viewController title="Map" id="6TG-tt-mn1" sceneMemberID="viewController">
+                <viewController title="Map" id="6TG-tt-mn1" customClass="MapViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G58-2O-7q2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -853,7 +853,7 @@
         <!--Menu-->
         <scene sceneID="4ZR-6G-u96">
             <objects>
-                <viewController title="Menu" id="9qt-Uc-dbS" sceneMemberID="viewController">
+                <viewController title="Menu" id="9qt-Uc-dbS" customClass="MenuViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5l-Ab-QAm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1087,11 +1087,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="19U-yW-UwY"/>
-        <segue reference="h0U-UH-Fcs"/>
-        <segue reference="LDA-dC-HbZ"/>
-        <segue reference="hvT-4p-ixq"/>
-        <segue reference="nZM-tF-jJH"/>
+        <segue reference="5fH-gd-wf1"/>
+        <segue reference="urK-gX-fpJ"/>
+        <segue reference="EcE-Hn-jET"/>
+        <segue reference="Veb-SJ-HY2"/>
+        <segue reference="OFW-5i-hEQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="JarrodsMap" width="3128" height="1734"/>

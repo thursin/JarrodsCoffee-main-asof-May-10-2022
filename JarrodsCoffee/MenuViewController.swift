@@ -17,12 +17,12 @@ struct JarrodsMenu: Codable {
     let price2: Double
 }
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
     override func viewDidLoad() {
            super.viewDidLoad()
         
         
-        let urlString = "https://raw.githubusercontent.com/CarlosDDeLeon/Coffe-shop-menu/main/data.json"
+        let urlString = "https://raw.githubusercontent.com/MesaAppBoutique/JarrodsCoffee/main/JarrodsCoffee/data.json?token=AVLJ4L767JACKU7ISH7F3QLBQHOTU"
                 self.loadJson(fromURLString: urlString) { (result) in
                     switch result {
                     case .success(let data):
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                     }
                 }
         
-//readJsonFile is the JSON File that Json developed earlier with the menu data.
+//readLocalFile is the JSON File that Json developed earlier with the menu data.
     }
     
     private func readLocalFile(forName name: String) -> Data? {

@@ -263,7 +263,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="6TG-tt-mn1" kind="show" id="h0U-UH-Fcs"/>
+                                                            <segue destination="Cbi-8h-El9" kind="show" id="WIZ-yJ-bs2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -532,7 +532,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="6TG-tt-mn1" kind="show" id="dHB-XU-4ks"/>
+                                                            <segue destination="Cbi-8h-El9" kind="show" id="RqL-8l-zqv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -571,18 +571,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUW-zI-svd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133" y="-592"/>
+            <point key="canvasLocation" x="1728" y="-567"/>
         </scene>
         <!--Map-->
-        <scene sceneID="aRg-VI-40q">
+        <scene sceneID="gH7-6g-run">
             <objects>
-                <viewController title="Map" id="6TG-tt-mn1" customClass="MapViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G58-2O-7q2">
+                <viewController title="Map" id="Cbi-8h-El9" customClass="MapViewController" customModule="JarrodsCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNT-ly-cOZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-a8-EHx">
-                                <rect key="frame" x="0.0" y="20" width="414" height="797"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="797"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-Ef-Dk6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -604,7 +604,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="rgw-8G-3zO" kind="show" id="AGo-2y-Es0"/>
+                                                    <segue destination="rgw-8G-3zO" kind="show" id="2Kt-a3-yfS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBR-7n-Kux">
@@ -623,7 +623,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="4Rt-wi-aGH" kind="show" id="8Fq-jL-ZZB"/>
+                                                    <segue destination="4Rt-wi-aGH" kind="show" id="HfV-Sa-MGA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfL-zg-o4x">
@@ -642,31 +642,47 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="14x-Ch-CDN" kind="show" id="ZeH-wT-Srx"/>
+                                                    <segue destination="14x-Ch-CDN" kind="show" id="cpJ-VA-aRN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Az-OT-saw" appends="YES" id="FRy-vx-Q30"/>
+                                        </connections>
                                     </stackView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-4v-Jzu">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-4v-Jzu">
                                         <rect key="frame" x="0.0" y="50" width="414" height="747"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Az-OT-saw" appends="YES" id="7cQ-TV-BbT"/>
+                                        </connections>
                                     </mapView>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1Az-OT-saw" appends="YES" id="rQB-XO-p6E"/>
+                                </connections>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="p88-RY-osH"/>
-                        <color key="backgroundColor" red="0.16970703009999999" green="0.194095403" blue="0.2784412503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="fow-c3-EN1"/>
+                        <color key="backgroundColor" red="0.1734803915" green="0.19431975479999999" blue="0.27059727909999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="g7H-a8-EHx" firstAttribute="top" secondItem="p88-RY-osH" secondAttribute="top" constant="20" id="51Q-iY-Snw"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="g7H-a8-EHx" secondAttribute="bottom" constant="-9" id="6da-iO-8gW"/>
-                            <constraint firstItem="g7H-a8-EHx" firstAttribute="leading" secondItem="p88-RY-osH" secondAttribute="leading" id="kj8-K0-xh8"/>
-                            <constraint firstItem="p88-RY-osH" firstAttribute="trailing" secondItem="g7H-a8-EHx" secondAttribute="trailing" id="w9Q-ML-47c"/>
+                            <constraint firstItem="g7H-a8-EHx" firstAttribute="leading" secondItem="fow-c3-EN1" secondAttribute="leading" id="RkT-Zv-Tqx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="g7H-a8-EHx" secondAttribute="bottom" constant="11" id="ffN-Iv-QX2"/>
+                            <constraint firstItem="g7H-a8-EHx" firstAttribute="centerX" secondItem="cNT-ly-cOZ" secondAttribute="centerX" id="nvP-86-QUF"/>
+                            <constraint firstItem="g7H-a8-EHx" firstAttribute="top" secondItem="fow-c3-EN1" secondAttribute="top" id="wuC-S4-cn6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nbD-id-q3O"/>
+                    <navigationItem key="navigationItem" id="RF4-Ks-wzZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="8L1-4v-Jzu" id="1pa-J5-usK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jdf-nu-rIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC9-IK-0j1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="1Az-OT-saw"/>
             </objects>
-            <point key="canvasLocation" x="565" y="313"/>
+            <point key="canvasLocation" x="640.57971014492762" y="464.73214285714283"/>
         </scene>
         <!--Pastry-->
         <scene sceneID="b6k-m5-Jj6">
@@ -1192,7 +1208,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="6TG-tt-mn1" kind="show" id="J03-SY-kkm"/>
+                                                            <segue destination="Cbi-8h-El9" kind="show" id="Uad-JJ-5kI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1342,7 +1358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3X-jg-YNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="-130"/>
+            <point key="canvasLocation" x="1728" y="349"/>
         </scene>
         <!--Fresh Brewed Iced Tea-->
         <scene sceneID="YLV-Fx-ZMy">
@@ -1582,6 +1598,9 @@
                                                                 <integer key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="4Rt-wi-aGH" kind="show" id="ybY-3i-5Ld"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1t4-2A-knc">
                                                         <rect key="frame" x="0.0" y="88" width="143" height="35"/>
@@ -1741,7 +1760,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="6TG-tt-mn1" kind="show" id="EXA-4z-bKg"/>
+                                                            <segue destination="Cbi-8h-El9" kind="show" id="oCY-Bt-Z0b"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1795,11 +1814,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZeH-wT-Srx"/>
-        <segue reference="AGo-2y-Es0"/>
-        <segue reference="dHB-XU-4ks"/>
-        <segue reference="8Fq-jL-ZZB"/>
-        <segue reference="nZM-tF-jJH"/>
+        <segue reference="cpJ-VA-aRN"/>
+        <segue reference="2Kt-a3-yfS"/>
+        <segue reference="WIZ-yJ-bs2"/>
+        <segue reference="HfV-Sa-MGA"/>
+        <segue reference="cKD-ux-fMA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bagel_Sandwiches1" width="828" height="781"/>

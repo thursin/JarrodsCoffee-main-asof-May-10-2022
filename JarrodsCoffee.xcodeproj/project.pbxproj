@@ -11,6 +11,7 @@
 		A6A79462268137F000D97421 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A79461268137F000D97421 /* ContactUsViewController.swift */; };
 		A6A794642681380300D97421 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A794632681380300D97421 /* EventsViewController.swift */; };
 		A6A794662681381900D97421 /* MenuCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A794652681381800D97421 /* MenuCategoryViewController.swift */; };
+		D34C58482742D8D200AADF0E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34C58472742D8D200AADF0E /* MapKit.framework */; };
 		D3B56EA0273AE95C004D3AB8 /* MenuCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B56E9F273AE95C004D3AB8 /* MenuCategoryTableViewCell.swift */; };
 		D3B8820E263A1F4B00BC294C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8820D263A1F4B00BC294C /* AppDelegate.swift */; };
 		D3B88210263A1F4B00BC294C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8820F263A1F4B00BC294C /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 		D3B88215263A1F4B00BC294C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B88213263A1F4B00BC294C /* Main.storyboard */; };
 		D3B88217263A1F4B00BC294C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B88216263A1F4B00BC294C /* Assets.xcassets */; };
 		D3B8821A263A1F4B00BC294C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B88218263A1F4B00BC294C /* LaunchScreen.storyboard */; };
+		D3D6BAD22741C5670042A455 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6BAD12741C5670042A455 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		A6A79461268137F000D97421 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		A6A794632681380300D97421 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		A6A794652681381800D97421 /* MenuCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoryViewController.swift; sourceTree = "<group>"; };
+		D34C58472742D8D200AADF0E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D3B56E9F273AE95C004D3AB8 /* MenuCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D3B8820A263A1F4B00BC294C /* JarrodsCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JarrodsCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B8820D263A1F4B00BC294C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		D3B88216263A1F4B00BC294C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3B88219263A1F4B00BC294C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3B8821B263A1F4C00BC294C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D6BAD12741C5670042A455 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34C58482742D8D200AADF0E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34C58462742D8D200AADF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D34C58472742D8D200AADF0E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3B88201263A1F4B00BC294C = {
 			isa = PBXGroup;
 			children = (
 				D3B8820C263A1F4B00BC294C /* JarrodsCoffee */,
 				D3B8820B263A1F4B00BC294C /* Products */,
+				D34C58462742D8D200AADF0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +84,7 @@
 				D3B8820F263A1F4B00BC294C /* SceneDelegate.swift */,
 				D3B88211263A1F4B00BC294C /* HomeViewController.swift */,
 				D3B88213263A1F4B00BC294C /* Main.storyboard */,
+				D3D6BAD12741C5670042A455 /* MapViewController.swift */,
 				D3B88216263A1F4B00BC294C /* Assets.xcassets */,
 				D3B88218263A1F4B00BC294C /* LaunchScreen.storyboard */,
 				D3B8821B263A1F4C00BC294C /* Info.plist */,
@@ -156,6 +171,7 @@
 				D3B8820E263A1F4B00BC294C /* AppDelegate.swift in Sources */,
 				A6A79462268137F000D97421 /* ContactUsViewController.swift in Sources */,
 				D3B56EA0273AE95C004D3AB8 /* MenuCategoryTableViewCell.swift in Sources */,
+				D3D6BAD22741C5670042A455 /* MapViewController.swift in Sources */,
 				D3B88210263A1F4B00BC294C /* SceneDelegate.swift in Sources */,
 				A6A79460268137DD00D97421 /* MenuViewController.swift in Sources */,
 				A6A794642681380300D97421 /* EventsViewController.swift in Sources */,

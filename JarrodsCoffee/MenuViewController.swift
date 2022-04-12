@@ -80,7 +80,7 @@ class MenuViewController: UIViewController {
 
              
          } catch {
-             print("Decode error, sometingh went wrong.")
+             print("Decode error, something went wrong.")
          }
      }
     

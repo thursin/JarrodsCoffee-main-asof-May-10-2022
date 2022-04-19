@@ -15,6 +15,15 @@ class MapViewController: UIViewController,
     
     @IBOutlet weak var mapView: MKMapView!
    
+
+    @IBAction func satelliteViewTypeButton(_ sender: Any) {
+        self.mapView.mapType = MKMapType.hybridFlyover
+    }
+    
+    @IBAction func standardViewTypeButton(_ sender: Any) {
+        self.mapView.mapType = MKMapType.standard
+    }
+    
     private let locationManager = CLLocationManager()
     
     let jarrodLoc = CLLocationCoordinate2D(latitude: 33.415490, longitude: -111.836050)
@@ -22,9 +31,7 @@ class MapViewController: UIViewController,
     let destinationPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 33.415490, longitude: -111.836050), addressDictionary: nil)
     let destinationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 33.415490, longitude: -111.836050), addressDictionary: nil))
     
-    
-    
-    var mapType:[MKMapType] = [.hybrid, .satellite, .standard]
+    var mapTypes:[MKMapType] = [.hybrid, .satellite, .standard]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +65,8 @@ class MapViewController: UIViewController,
     private func checkAuthorizationForLocation() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
+            locationManager.stopUpdatingLocation()
             mapView.showsUserLocation = true
-            locationManager.startUpdatingLocation()
             break
         case .denied:
             showJarrodLocation()
@@ -76,8 +83,11 @@ class MapViewController: UIViewController,
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkAuthorizationForLocation()
     }
-            
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //guard let location = locations.first else { return }
+        //guard location.distance(from: lastLocation) > 50 else { return }
         let locationManager = manager
         locationManager.delegate = self
         var currentLoc: CLLocation!
@@ -88,19 +98,19 @@ class MapViewController: UIViewController,
         //let destinationPlacemark = MKPlacemark(coordinate: jarrodLoc, addressDictionary: nil)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         //let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-        let sourceAnnotation = MKPointAnnotation()
-        sourceAnnotation.title = "Current Location"
-        if let location = sourcePlacemark.location {
-            sourceAnnotation.coordinate = location.coordinate
-        }
-        self.mapView.addAnnotations([sourceAnnotation,jarrodAnnotation])
+        //let sourceAnnotation = MKPointAnnotation()
+        //sourceAnnotation.title = "Current Location"
+        //if let location = sourcePlacemark.location {
+         //   sourceAnnotation.coordinate = location.coordinate
+        //}
+        
+        //self.mapView.addAnnotations([sourceAnnotation,jarrodAnnotation])
 
         let directionRequest = MKDirections.Request()
         directionRequest.source = sourceMapItem
         directionRequest.destination = destinationMapItem
         directionRequest.transportType = .automobile
         
-                        
         // Calculate the direction
         let directions = MKDirections(request: directionRequest)
                         
@@ -112,11 +122,11 @@ class MapViewController: UIViewController,
                 }
                 return
             }
-         
-            let route = response.routes[0]
 
+            let route = response.routes[0]
+            let padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
             self.mapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
-            //self.mapView.setRegion(MKCoordinateRegion.init(route.polyline.boundingMapRect), animated: false)
+            self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: padding, animated: false)
         }
    }
     

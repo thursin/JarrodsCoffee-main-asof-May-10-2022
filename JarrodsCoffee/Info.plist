@@ -33,8 +33,11 @@
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
+		<string>MKDirectionsModeBike</string>
 		<string>MKDirectionsModeBus</string>
 		<string>MKDirectionsModeCar</string>
+		<string>MKDirectionsModeStreetCar</string>
+		<string>MKDirectionsModeTrain</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>User must authorize location request</string>
@@ -63,6 +66,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UILaunchStoryboardName - 2</key>
+	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

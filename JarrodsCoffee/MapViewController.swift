@@ -24,6 +24,14 @@ class MapViewController: UIViewController,
         self.mapView.mapType = MKMapType.standard
     }
     
+    
+    @IBAction func getDirectionsButton(_ sender: Any) {
+        let mapAlert = UIAlertController(title: "Map setting", message: "If the 'Allow to use your location' does not popped up. The settings might be set to 'never'; please change the setting. Go to 'Settings' > 'JarrodsCoffe' > Location; Change to 'Ask Next Time or When I Share'", preferredStyle: .alert)
+        mapAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        present(mapAlert, animated: true)
+        
+    }
+    
     private let locationManager = CLLocationManager()
     
     let jarrodLoc = CLLocationCoordinate2D(latitude: 33.415490, longitude: -111.836050)
